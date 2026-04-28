@@ -31,7 +31,7 @@ Assurez-vous d'avoir Docker Desktop installé.
 Clonez le dépôt :
 
 Bash
-git clone https://github.com/votre-nom/votre-projet.git
+git clone https://github.com/LAMGAMATE/Microservices-Architecture-with-Node.js-RabbitMQ-Docker.git
 Lancez les conteneurs :
 
 Bash
