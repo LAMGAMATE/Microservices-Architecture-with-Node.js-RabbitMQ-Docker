@@ -1,0 +1,30 @@
+
+version: '3.8'
+
+services:
+  mongodb:
+    image: mongo:latest
+    ports:
+      - "27017:27017"
+
+  produit-service:
+    build: ./produit-service
+    ports:
+      - "4000:4000"
+    depends_on:
+      - mongodb
+
+  commande-service:
+    build: ./commande-service
+    ports:
+      - "4001:4001"
+    depends_on:
+      - mongodb
+      - produit-service
+
+  auth-service:
+    build: ./auth-service
+    ports:
+      - "4002:4002"
+    depends_on:
+      - mongodb
